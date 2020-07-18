@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+    <body>
+        <p>Part2 :</p>
+        <p id="part2"></p>
+        <p>Part3 :</p>
+        <p id="part3"></p>
+        <script>
+            var personnel = [
+                { id: 5, name: "Luke Skywalker", pilotingScore: 98, shootingScore: 56, isForceUser: true, },
+                { id: 82, name: "Sabine Wren", pilotingScore: 73, shootingScore: 99, isForceUser: false, },
+                { id: 22, name: "Zeb Orellios", pilotingScore: 20, sForceUser: false, },
+                { id: 15, name: "Ezra Bridger", pilotingScore: 43, shootingScore: 67, isForceUser: true, },
+                { id: 11, name: "Caleb Dume", pilotingScore: 71, shootingScore: 85, isForceUser: true, }, ];
+            
+            var part2 = personnel.filter((person) => person.isForceUser)
+                        .map((person) => person.pilotingScore + person.shootingScore)
+                        .reduce((total, amount) => total + amount)
+            var part3 = personnel.map((person) => person.name)   
+            document.getElementById("part2").innerHTML = part2;
+            document.getElementById("part3").innerHTML = part3;
+        </script>
+    </body>
+</html>
