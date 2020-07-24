@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<form id="main" ng-app ng-controller="myservices">
+			<h1>Services</h1>
+			<ul id="services">
+				<li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}">
+						{{service.title}}<span>{{service.price | currency}}</span></label>
+				</li>
+			</ul>
+			<div class="total"> Total: <span>{{total() | currency}}</span> </div>
+		</form>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>
+	  <script src="script.js"></script>
+	</body>
+</html>
