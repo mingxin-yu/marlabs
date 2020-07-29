@@ -1,0 +1,4 @@
+> db.restaurants.find({name: /^Wil/},{"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1});
+{ "_id" : ObjectId("5f20cc61ec977d3a31af654f"), "borough" : "Brooklyn", "cuisine" : "Delicatessen", "name" : "Wilken'S Fine Food", "restaurant_id" : "40356483" }
+{ "_id" : ObjectId("5f20cc61ec977d3a31af6552"), "borough" : "Bronx", "cuisine" : "American ", "name" : "Wild Asia", "restaurant_id" : "40357217" }
+{ "_id" : ObjectId("5f20cc62ec977d3a31af7357"), "borough" : "Bronx", "cuisine" : "Pizza", "name" : "Wilbel Pizza", "restaurant_id" : "40871979" }
