@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Xena Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: white;
+        }
+        input {
+            text-transform: uppercase;
+        }
+        table {
+            width: 60%;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms['register']['name'].value;
+            var age = document.forms['register']['age'].value;
+            var email = document.forms['register']['email'].value;
+            if(!name.match(/^[A-Za-z]+$/)) {
+				alert("Name:\t* CHARACTERS ONLY");
+			}
+            if(parseInt(age) < 18) {
+                alert("Age:\t* EQUAL OR GREATER THAN 18");
+            }
+            if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Email ID:\t* INVALID EMAIL ID");
+            }
+        }
+    </script>
+</head>
+<body>
+	<h1>Xena Events</h1>
+    <div>
+        <form name="register" onsubmit="validateForm()">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input list="venue" id="ice-cream-choice" name="ice-cream-choice" />
+                        <datalist id="venue">
+                            <option value="Bangalore">
+                            <option value="Rajkot">
+                            <option value="Vijag">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
